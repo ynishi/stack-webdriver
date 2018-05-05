@@ -3,40 +3,40 @@ docker-compose for stack-build image
 
 ## Usage
 * short cut is made with make
-```
+```sh
 $ make usage
 ```
 ### ghci
-```
+```sh
 $ docker-compose run stack stack ghci
 # or
-# make ghci
+$ make ghci
 # in project
-# make do COMM=ghci PRJ=${PROJECT_NAME}
+$ make do COMM=ghci PRJ=${PROJECT_NAME}
 ```
 ### create new project
 ```sh
 $ docker-compose run stack stack new ${PROJECT_NAME}
 # or 
-# make new PRJ=${PROJECT_NAME}
+$ make new PRJ=${PROJECT_NAME}
 ```
 ### build
 ```sh
 $ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack build
 # or
-# make build PRJ=${PROJECT_NAME}
+$ make build PRJ=${PROJECT_NAME}
 ```
 ### exec
 ```sh
 $ docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack exec ${PROJECT_NAME}-exe
 # or
-# make exec PRJ=${PROJECT_NAME}
+$ make exec PRJ=${PROJECT_NAME}
 ```
 ### do stack command
 ```sh
 $ docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack ${COMMAND} ${ARGS}
 # or
-# make do PRJ=${PROJECT_NAME} COMM=${COMMAND} ARGS=${ARGS}
+$ make do PRJ=${PROJECT_NAME} COMM=${COMMAND} ARGS=${ARGS}
 ```
 ## LICENSE
 * MIT, see LICENSE
