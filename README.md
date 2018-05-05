@@ -4,11 +4,11 @@ docker-compose for stack-build image
 ## Usage
 * short cut is made with make
 ```
-make usage
+$ make usage
 ```
 ### ghci
 ```
-docker-compose run stack stack ghci
+$ docker-compose run stack stack ghci
 # or
 # make ghci
 # in project
@@ -28,13 +28,15 @@ $ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack build
 ```
 ### exec
 ```sh
-$docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack exec ${PROJECT_NAME}-exe
+$ docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack exec ${PROJECT_NAME}-exe
 # or
 # make exec PRJ=${PROJECT_NAME}
 ```
 ### do stack command
 ```sh
-$docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack ${COMMAND} ${ARGS}
+$ docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack ${COMMAND} ${ARGS}
 # or
 make do PRJ=${PROJECT_NAME} COMM=${COMMAND} ARGS=${ARGS}
 ```
+## LICENSE
+* MIT, see LICENSE
