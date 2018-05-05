@@ -11,6 +11,8 @@ $ make usage
 $ docker-compose run stack stack ghci
 # or
 $ make ghci
+# with args
+$ make ghci ARGS='--package mtl'
 # in project
 $ make do COMM=ghci PRJ=${PROJECT_NAME}
 ```
