@@ -1,0 +1,9 @@
+version: '3'
+services:
+  stack:
+    image: fpco/stack-build
+    working_dir: /stack
+    volumes:
+      - ./dot.stack-work:/root/.stack-work # root:root
+      - ./dot.stack:/root/.stack # root:root
+      - ./stack:/stack
