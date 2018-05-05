@@ -3,7 +3,7 @@
 #
 PRJ=myprj
 COMM=build
-.PHONY: new build exec do
+.PHONY: usage ghci new build exec do
 
 usage:
 	@echo Usage: make PRJ=project_name command
@@ -12,14 +12,14 @@ usage:
 ghci:
 	$(MAKE) do COMM=ghci PRJ=
 
+new:
+	$(MAKE) do COMM=new
+
 build:
 	$(MAKE) do COMM=build
 
 exec: build
 	$(MAKE) do COMM=exec ARGS=$(PRJ)-exe
-
-new:
-	$(MAKE) do COMM=new
 
 do:
 	docker-compose run --workdir=/stack/$(PRJ) stack stack $(COMM) $(ARGS)
