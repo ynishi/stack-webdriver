@@ -36,7 +36,7 @@ $ docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack exec ${PROJECT_N
 ```sh
 $ docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack ${COMMAND} ${ARGS}
 # or
-make do PRJ=${PROJECT_NAME} COMM=${COMMAND} ARGS=${ARGS}
+# make do PRJ=${PROJECT_NAME} COMM=${COMMAND} ARGS=${ARGS}
 ```
 ## LICENSE
 * MIT, see LICENSE
