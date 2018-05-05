@@ -28,13 +28,13 @@ $ make build PRJ=${PROJECT_NAME}
 ```
 ### exec
 ```sh
-$ docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack exec ${PROJECT_NAME}-exe
+$ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack exec ${PROJECT_NAME}-exe
 # or
 $ make exec PRJ=${PROJECT_NAME}
 ```
 ### do stack command
 ```sh
-$ docker-comse run --workdir=/stack/${PROJECT_NAME} stack stack ${COMMAND} ${ARGS}
+$ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack ${COMMAND} ${ARGS}
 # or
 $ make do PRJ=${PROJECT_NAME} COMM=${COMMAND} ARGS=${ARGS}
 ```
