@@ -3,7 +3,7 @@
 #
 PRJ=myprj
 COMM=build
-.PHONY: usage ghci new build exec do
+.PHONY: usage ghci new init build exec do
 
 usage:
 	@echo Usage: make PRJ=project_name command
@@ -13,7 +13,10 @@ ghci:
 	$(MAKE) do COMM=ghci PRJ=
 
 new:
-	$(MAKE) do COMM=new
+	$(MAKE) do COMM=new ARGS=$(PRJ) PRJ=
+
+init:
+	$(MAKE) do COMM=init
 
 build:
 	$(MAKE) do COMM=build
