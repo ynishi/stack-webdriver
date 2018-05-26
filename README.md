@@ -34,6 +34,12 @@ $ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack exec ${PROJECT
 # or
 $ make exec PRJ=${PROJECT_NAME}
 ```
+### install
+```sh
+$ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack install ${PACKAGE_NAME}
+# or
+$ make install PRJ=${PROJECT_NAME} ARGS=${PACKAGE_NAME}
+```
 ### do stack command
 ```sh
 $ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack ${COMMAND} ${ARGS}

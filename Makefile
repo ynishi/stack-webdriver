@@ -24,5 +24,8 @@ build:
 exec: build
 	$(MAKE) do COMM=exec ARGS=$(PRJ)-exe
 
+install:
+	$(MAKE) do COMM=install
+
 do:
 	docker-compose run --workdir=/stack/$(PRJ) stack stack $(COMM) $(ARGS)
