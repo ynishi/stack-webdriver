@@ -7,3 +7,7 @@ services:
       - ./dot.stack-work:/root/.stack-work # root:root
       - ./dot.stack:/root/.stack # root:root
       - ./stack:/stack
+    links:
+      - standalone-chrome
+  standalone-chrome:
+    image: selenium/standalone-chrome
