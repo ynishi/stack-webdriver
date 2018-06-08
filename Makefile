@@ -1,7 +1,7 @@
 # usage
 # make PRJ=projcet_name command
 #
-PRJ=myprj
+PRJ=wd
 COMM=build
 .PHONY: usage ghci new init build exec do
 
@@ -10,7 +10,7 @@ usage:
 	@echo [debug] PRJ: $(PRJ)
 
 ghci:
-	$(MAKE) do COMM=ghci PRJ=
+	$(MAKE) do COMM=ghci
 
 new:
 	$(MAKE) do COMM=new ARGS=$(PRJ) PRJ=
