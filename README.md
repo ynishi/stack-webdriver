@@ -1,5 +1,6 @@
-# stack-build-docker-compose
-docker-compose for stack-build image
+# stack-build-docker-compose with webdriver
+docker-compose for stack-build with webdriver image
+default project is webdriver.
 
 ## Usage
 * short cut is made with make
@@ -8,43 +9,33 @@ $ make usage
 ```
 ### ghci
 ```sh
-$ docker-compose run stack stack ghci
-# or
 $ make ghci
 # with args
 $ make ghci ARGS='--package mtl'
-# in project
-$ make do COMM=ghci PRJ=${PROJECT_NAME}
-```
-### create new project
-```sh
-$ docker-compose run stack stack new ${PROJECT_NAME}
-# or 
-$ make new PRJ=${PROJECT_NAME}
 ```
 ### build
 ```sh
-$ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack build
+$ docker-compose run --workdir=/stack/wd stack stack build
 # or
-$ make build PRJ=${PROJECT_NAME}
+$ make build
 ```
 ### exec
 ```sh
-$ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack exec ${PROJECT_NAME}-exe
+$ docker-compose run --workdir=/stack/wd stack stack exec wd-exe
 # or
-$ make exec PRJ=${PROJECT_NAME}
+$ make exec
 ```
 ### install
 ```sh
-$ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack install ${PACKAGE_NAME}
+$ docker-compose run --workdir=/stack/wd stack stack install ${PACKAGE_NAME}
 # or
-$ make install PRJ=${PROJECT_NAME} ARGS=${PACKAGE_NAME}
+$ make install ARGS=${PACKAGE_NAME}
 ```
 ### do stack command
 ```sh
-$ docker-compose run --workdir=/stack/${PROJECT_NAME} stack stack ${COMMAND} ${ARGS}
+$ docker-compose run --workdir=/stack/wd stack stack ${COMMAND} ${ARGS}
 # or
-$ make do PRJ=${PROJECT_NAME} COMM=${COMMAND} ARGS=${ARGS}
+$ make do COMM=${COMMAND} ARGS=${ARGS}
 ```
 ## LICENSE
 * MIT, see LICENSE
